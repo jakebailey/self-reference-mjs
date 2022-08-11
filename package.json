@@ -1,11 +1,14 @@
 {
   "name": "self-reference-mjs",
   "version": "1.0.0",
+  "type": "module",
   "exports": {
     ".": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "run-a": "tsc && node dist/a.js",
+    "run-b": "tsc && node b.mjs"
   },
   "devDependencies": {
     "@types/node": "^18.7.1",
